@@ -1,5 +1,20 @@
+@font-face{
+    font-family: "Norse";
+    src: url(./assets/fonts/Norse.woff2);
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face{
+    font-family: "Roboto";
+    src: url(./assets/fonts/Roboto.woff2);
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
 :root{
-    font-size: 2rem;
+    font-family: "Roboto";
 }
 
 *{
@@ -8,11 +23,9 @@
     box-sizing: border-box;
 }
 
-
-
 #outer-box{
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
 }
 
@@ -24,16 +37,16 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border-color: yellow;
-    border-style: solid;
-    border-width: 1rem;
 }
-#right-div{    
+#right-div{
+    padding: 8rem 2.5rem 8rem 2.5rem;    
     flex: 2;
-    border-color: blue;
-    border-style: solid;
-    border-width: 1rem;
-    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 2rem;
+    background-color: #f9fafb;
+
 }
 
 #picture1{
@@ -42,7 +55,7 @@
 }
 
 #logo-section{
-    margin-top: auto;
+    margin-top: 15vh;
     margin-bottom: auto;
     padding-left: 50%;
     padding-right: 50%;
@@ -51,24 +64,64 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: hsla(0, 0%, 0%, 0.7);
+    background-color: hsla(0, 0%, 0%, 0.416);
 }
 
 h1{
+    font-family: "Norse";
     color: white;
     font-size: 6rem;
 }
 
 #odin-logo{
-    width: 200px;
+    width: clamp(5rem, 3vw, 12.5rem);
     height: auto;
 }
 
 #full-form{
+    background-color: white;
+    padding: 1rem 2rem 1rem 2rem;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.327);
     display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+#input-field{
+    display: flex;
+    column-gap: 3rem;
 }
 
 .side-form{
     display: flex;
     flex-direction: column;
+    row-gap: 0.5rem;
+}
+
+input,button{
+    font: inherit;
+    border-radius: 0.25rem;
+    height: 2rem;
+    width: 20rem;
+}
+input{
+    margin-top: -0.5rem;
+}
+button{
+    text-align: center;
+    width: 12rem;
+    background-color: #596D48;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.327);
+    color: white;
+}
+a{
+    color:  #596D48;
+}
+
+button:hover{
+    background-color:  #596d48d4;
+}
+
+legend{
+    font-size: 1.75rem;
 }
